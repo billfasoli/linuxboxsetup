@@ -19,6 +19,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 #Install nerdfonts
+
 ###No script - just download from this repo and install
 
 #Download plugins for autosuggestion and syntax highlighting
@@ -32,11 +33,8 @@ rm .zshrc
 rm .p10k.conf
 
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.zshrc
-
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.zshrc
-
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.nanorc
-
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.tmux.conf
 
 #reboot
