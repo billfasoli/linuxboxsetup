@@ -1,0 +1,12 @@
+# https://www.nano-editor.org/dist/latest/nanorc.5.html
+# EDITOR CONFIG
+# Default basic configs
+set linenumbers # display line number (left column)
+set mouse # Enable mouse (similar to Vim)
+set autoindent # Auto tabe / spaces in new line
+set tabsize 4 # Display tab by 4 spaces (no replacing)
+
+# More custom configs
+set locking # Only 1 nano process is allowed to access file (similar to Vim)
+set softwrap # Text wrapping for very long lines
+set constantshow # Show line column, ... in status bar
