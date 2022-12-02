@@ -26,9 +26,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 #Delete current .zshrc and .p10k.conf files and download updated configuration files
 rm .zshrc
 rm .p10k.conf
+
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.zshrc
+
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.zshrc
+
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.nanorc
+
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.tmux.conf
 
 #reboot
