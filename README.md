@@ -33,8 +33,11 @@ rm .zshrc
 rm .p10k.conf
 
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.zshrc
+
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.zshrc
+
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.nanorc
+
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.tmux.conf
 
 #reboot
