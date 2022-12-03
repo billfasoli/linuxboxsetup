@@ -1,13 +1,17 @@
 #Install tmux
+
 sudo apt install tmux
 
 #Install ZSH
+
 sudo apt install zsh
 
 #Make ZSH your default shell
+
 chsh -s $(which zsh)
 
 #Test shell (optional)
+
 echo $SHELL
 
 #Install Oh My ZSH
