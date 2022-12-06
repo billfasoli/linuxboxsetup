@@ -38,7 +38,7 @@ rm .p10k.conf
 
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.zshrc
 
-wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.zshrc
+wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.p10k.zsh
 
 wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.nanorc
 
