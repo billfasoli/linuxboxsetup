@@ -1,3 +1,6 @@
+# Enable 24-bit true color support
+export COLORTERM=truecolor
+
 # Start TMUX when starting zsh
  if [ "$TMUX" = "" ]; then tmux; fi
 

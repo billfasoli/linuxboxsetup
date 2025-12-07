@@ -1,47 +1,73 @@
-#Install tmux
+# Linux Box Setup
 
-sudo apt install tmux
+A script to quickly configure a fresh Linux installation with my preferred terminal setup: zsh, tmux, Oh My Zsh, and Powerlevel10k with 24-bit true color support.
 
-#Install ZSH
+## Quick Start
 
-sudo apt install zsh
+```bash
+git clone https://github.com/billfasoli/linuxboxsetup.git
+cd linuxboxsetup
+./setup.sh
+```
 
-#Make ZSH your default shell
+After the script completes, log out and log back in for the shell changes to take effect.
 
-chsh -s $(which zsh)
+## Manual Step: Install Nerd Font
 
-#Test shell (optional)
+The included font (`Fura Mono Regular Nerd Font Complete.otf`) must be installed manually:
 
-echo $SHELL
+1. Open the font file from this repo
+2. Click "Install" (or double-click to open in your font manager)
+3. Set your terminal emulator to use "FuraMono Nerd Font"
 
-#Install Oh My ZSH
+This step is required for Powerlevel10k icons to display correctly.
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+## What the Script Does
 
-#Install PowerLevel10k
+The setup script automates the following:
 
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+### 1. Install tmux
+Terminal multiplexer for managing multiple terminal sessions in one window.
 
-#Install nerdfonts
+### 2. Install zsh
+A powerful shell with better autocompletion and customization than bash.
 
-###No script - just download from this repo and install
+### 3. Set zsh as default shell
+Runs `chsh -s $(which zsh)` to make zsh your login shell.
 
-#Download plugins for autosuggestion and syntax highlighting
+### 4. Install Oh My Zsh
+Framework for managing zsh configuration with themes and plugins.
 
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+### 5. Install Powerlevel10k
+A fast and highly customizable zsh theme with git status, command execution time, and more.
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+### 6. Install zsh plugins
+- **zsh-autosuggestions** - Suggests commands as you type based on history
+- **zsh-syntax-highlighting** - Highlights valid commands in green, errors in red
 
-#Delete current .zshrc and .p10k.conf files and download updated configuration files
-rm .zshrc
-rm .p10k.conf
+### 7. Copy configuration files
+Installs the following config files to your home directory:
+- `.zshrc` - zsh configuration with 24-bit color support
+- `.p10k.zsh` - Powerlevel10k theme configuration
+- `.tmux.conf` - tmux configuration with 24-bit color support
+- `.nanorc` - nano editor configuration
 
-wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.zshrc
+Existing config files are backed up with a `.backup` extension.
 
-wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.p10k.zsh
+### 8. Install tmux plugin manager (TPM)
+After setup, press `Ctrl+B` then `I` inside tmux to install tmux plugins.
 
-wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.nanorc
+## Configuration Highlights
 
-wget https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/.tmux.conf
+- **24-bit true color** enabled in both zsh and tmux
+- **Mouse mode** enabled in tmux
+- **tmux auto-starts** when opening a terminal
+- **Public IP and timestamp** displayed in tmux status bar
+- **Window/pane numbering** starts at 1 (not 0)
 
-#reboot
+## Post-Installation
+
+1. Log out and log back in (or reboot)
+2. Install the Nerd Font (see above)
+3. Configure your terminal to use the Nerd Font
+4. In tmux, press `Ctrl+B` then `I` to install plugins
