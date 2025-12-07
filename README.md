@@ -10,7 +10,7 @@ cd linuxboxsetup
 ./setup.sh
 ```
 
-After the script completes, log out and log back in for the shell changes to take effect.
+The script will automatically launch zsh with the new configuration when complete.
 
 ## Manual Step: Install Nerd Font
 
@@ -67,7 +67,6 @@ After setup, press `Ctrl+B` then `I` inside tmux to install tmux plugins.
 
 ## Post-Installation
 
-1. Log out and log back in (or reboot)
-2. Install the Nerd Font (see above)
-3. Configure your terminal to use the Nerd Font
-4. In tmux, press `Ctrl+B` then `I` to install plugins
+1. Install the Nerd Font (see above)
+2. Configure your terminal to use the Nerd Font
+3. In tmux, press `Ctrl+B` then `I` to install plugins

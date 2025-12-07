@@ -134,8 +134,18 @@ echo ""
 echo "=== Setup Complete! ==="
 echo ""
 echo "Next steps:"
-echo "  1. Log out and log back in (or reboot) for shell changes to take effect"
-echo "  2. Set your terminal emulator to use the 'FuraMono Nerd Font' font"
-echo "  3. In tmux, press Ctrl+B then I to install tmux plugins"
+echo "  1. Set your terminal emulator to use the 'FuraMono Nerd Font' font"
+echo "  2. In tmux, press Ctrl+B then I to install tmux plugins"
 echo ""
 echo "Your old config files (if any) have been backed up with .backup extension"
+echo ""
+
+# Reload tmux config if tmux is running
+if [ -n "$TMUX" ]; then
+    echo "Reloading tmux configuration..."
+    tmux source-file "$HOME/.tmux.conf"
+fi
+
+# Launch zsh to apply new configuration
+echo "Launching zsh with new configuration..."
+exec zsh
