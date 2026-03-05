@@ -4,27 +4,30 @@ A script to quickly configure a fresh Linux installation with my preferred termi
 
 ## Quick Start
 
+Run this single command on a fresh Linux box:
+
 ```bash
-git clone https://github.com/billfasoli/linuxboxsetup.git
-cd linuxboxsetup
-./setup.sh
+curl -fsSL https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/install.sh | bash
+```
+
+Or, if you prefer to review the script first:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/billfasoli/linuxboxsetup/main/install.sh -o install.sh
+less install.sh
+bash install.sh
 ```
 
 The script will automatically launch zsh with the new configuration when complete.
 
-## Manual Step: Install Nerd Font
+### Prerequisites
 
-The included font (`Fura Mono Regular Nerd Font Complete.otf`) must be installed manually:
-
-1. Open the font file from this repo
-2. Click "Install" (or double-click to open in your font manager)
-3. Set your terminal emulator to use "FuraMono Nerd Font"
-
-This step is required for Powerlevel10k icons to display correctly.
+- `git`, `curl`, and `sudo` must be available
+- Run as a regular user (not root)
 
 ## What the Script Does
 
-The setup script automates the following:
+The install script automates the following:
 
 ### 1. Install tmux
 Terminal multiplexer for managing multiple terminal sessions in one window.
@@ -45,7 +48,10 @@ A fast and highly customizable zsh theme with git status, command execution time
 - **zsh-autosuggestions** - Suggests commands as you type based on history
 - **zsh-syntax-highlighting** - Highlights valid commands in green, errors in red
 
-### 7. Copy configuration files
+### 7. Install Nerd Font
+Installs `Fura Mono Regular Nerd Font Complete.otf` to `~/.local/share/fonts` for Powerlevel10k icons.
+
+### 8. Copy configuration files
 Installs the following config files to your home directory:
 - `.zshrc` - zsh configuration with 24-bit color support
 - `.p10k.zsh` - Powerlevel10k theme configuration
@@ -54,7 +60,7 @@ Installs the following config files to your home directory:
 
 Existing config files are backed up with a `.backup` extension.
 
-### 8. Install tmux plugin manager (TPM)
+### 9. Install tmux plugin manager (TPM)
 After setup, press `Ctrl+B` then `I` inside tmux to install tmux plugins.
 
 ## Configuration Highlights
@@ -67,6 +73,5 @@ After setup, press `Ctrl+B` then `I` inside tmux to install tmux plugins.
 
 ## Post-Installation
 
-1. Install the Nerd Font (see above)
-2. Configure your terminal to use the Nerd Font
-3. In tmux, press `Ctrl+B` then `I` to install plugins
+1. Set your terminal emulator to use "FuraMono Nerd Font"
+2. In tmux, press `Ctrl+B` then `I` to install plugins
